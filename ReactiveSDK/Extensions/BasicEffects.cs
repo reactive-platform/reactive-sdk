@@ -1,9 +1,11 @@
-﻿using JetBrains.Annotations;
+﻿using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace Reactive.Components;
 
 [PublicAPI]
+[Obsolete("Define states manually instead.")]
 public static class BasicEffects {
     public static T WithScaleAnimation<T>(
         this T holder,
@@ -14,7 +16,7 @@ public static class BasicEffects {
     ) where T : IComponentHolder<ButtonBase> {
         var comp = holder.Component;
         
-        var value = ValueUtils.RememberAnimatedVector(
+        var value = StateUtils.RememberAnimatedVector(
             comp,
             baseScale,
             duration.GetValueOrDefault(10.fact()),

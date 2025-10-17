@@ -9,5 +9,5 @@
         <RootNamespace>Reactive.Components</RootNamespace>
     </PropertyGroup>
     <Import Project="..\ReactiveSDK.Unity.targets" />
-    <Import Project="..\reactive-ui\ReactiveUI.ExternalBuild.targets" />
+    <Import Project="..\reactive-ui\Reactive.ExternalBuild.targets" />
 </Project>
